@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vehicle Listing</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url(/image/benz\ logo.png);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      padding: 10px;
+    }
+
+    .vehicle-entry {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .vehicle-entry h3 {
+      margin: 0;
+    }
+
+    .vehicle-entry p {
+      margin: 5px 0;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 3px;
+    }
+
+    .add-vehicle-form {
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.1), 0 0 10px rgba(150, 150, 255, 0.7), 0 0 20px rgba(200, 200, 255, 0.5);
+      background-image: url('path/to/your/image.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .add-vehicle-form h2 {
+      margin: 0 0 10px;
+    }
+
+    .add-vehicle-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .add-vehicle-form input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .add-vehicle-form input[type="submit"] {
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .success-message {
+      background-color: #d4edda;
+      color: #155724;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      display: none;
+      position: relative;
+    }
+
+    .success-message .thumbs-up {
+      display: inline-block;
+      font-size: 24px;
+      animation: thumbs-up-animation 1s infinite;
+    }
+
+    @keyframes thumbs-up-animation {
+      0%, 20%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40%, 60% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Media queries for responsiveness */
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 5px;
+      }
+
+      .add-vehicle-form {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Vehicle Listing</h1>
+
+    <!-- Vehicle entries -->
+
+    <div class="add-vehicle-form">
+      <h2>Add a New Vehicle</h2>
+      <form id="add-vehicle-form">
+        <label for="make">Make:</label>
+        <input type="text" id="make" name="make" required>
+
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" required>
+
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" required>
+
+        <label for="license_plate">License Plate:</label>
+        <input type="text" id="license_plate" name="license_plate" required>
+
+        <input type="submit" value="Add Vehicle">
+      </form>
+    </div>
+
+    <div id="success-message" class="success-message">
+      Vehicle added successfully! We will keep you updated with any further updates.
+      <span class="thumbs-up">&#128077;</span>
+    </div>
+  </div>
+</body>
+</html>
